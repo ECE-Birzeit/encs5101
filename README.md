@@ -1,3 +1,5 @@
+<a href="https://encs5101.birzeit.me"><img src="public/og.png" alt="ENCS5101 Microprocessor and Embedded Systems Laboratory" width="100%"></a>
+
 # ENCS5101 · Microprocessor and Embedded Systems Laboratory
 
 Step-by-step lab manual for ENCS5101 at Birzeit University: ARM Cortex-M4 assembly in the Keil simulator, then the Arduino Mega from GPIO and motors to AVR assembly, timers, interrupts, ADC and serial links, finishing with LabVIEW, an elevator controller and the Raspberry Pi.

@@ -18,6 +18,9 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#00878f' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'ECE Labs · Birzeit University' }],
+    ['meta', { property: 'og:image', content: 'https://encs5101.birzeit.me/og.png' }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-K834Q72PP9' }],
     [
