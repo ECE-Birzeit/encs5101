@@ -5,6 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 
 import RegisterSW from './components/RegisterSW.vue'
+import ContinueReading from './components/ContinueReading.vue'
 
 import Screenshot from './components/Screenshot.vue'
 
@@ -12,7 +13,8 @@ export default {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'layout-bottom': () => h(RegisterSW),
+      'home-hero-actions-after': () => h(ContinueReading, { lab: 'encs5101', mode: 'card' }),
+      'layout-bottom': () => [h(RegisterSW), h(ContinueReading, { lab: 'encs5101', mode: 'track' })],
     })
   },
   enhanceApp({ app }) {
