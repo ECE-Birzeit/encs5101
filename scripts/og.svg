@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap');</style>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="16" cy="16" r="1.2" fill="rgba(245,245,245,.07)"/></pattern>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="9" stdDeviation="7" flood-color="#000" flood-opacity=".55"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="#1b1b1f"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  <g font-family="Geist, sans-serif" fill="#f5f5f5">
+    <text x="64" y="72" font-size="24" font-weight="600" letter-spacing="-.24">ECE Labs</text>
+    <text x="184" y="72" font-family="Geist Mono, monospace" font-size="18" fill="#a8a8a8">Birzeit University</text>
+    <text x="58" y="252" font-size="112" font-weight="600" letter-spacing="-5.6" fill="#3cc5cb">ENCS5101</text>
+    <text font-size="46" font-weight="600" letter-spacing="-1.4"><tspan x="64" y="334">Microprocessor and Embedded</tspan><tspan x="64" y="386">Systems Laboratory</tspan></text>
+    <text y="584" font-family="Geist Mono, monospace" font-size="19" fill="#a8a8a8"><tspan x="64" fill="#3cc5cb">encs5101.birzeit.me</tspan><tspan dx="20">Cortex-M4 · Arduino Mega</tspan></text>
+  </g>
+  <g transform="translate(930 305) rotate(-10) translate(-130.0 -130.0) scale(4.0625)" filter="url(#shadow)"><rect width="64" height="64" rx="12" fill="#00878f"/>
+  <path transform="translate(10 10) scale(1.8333)" fill="#fff" d="M18.087 6.146c-.3 0-.607.017-.907.069-2.532.367-4.23 2.239-5.18 3.674-.95-1.435-2.648-3.307-5.18-3.674a6.49 6.49 0 0 0-.907-.069C2.648 6.146 0 8.77 0 12s2.656 5.854 5.913 5.854c.3 0 .607-.017.916-.069 2.531-.376 4.23-2.247 5.18-3.683.949 1.436 2.647 3.307 5.18 3.683.299.043.607.069.915.069C21.344 17.854 24 15.23 24 12s-2.656-5.854-5.913-5.854zM6.53 15.734a3.837 3.837 0 0 1-.625.043c-2.148 0-3.889-1.7-3.889-3.777 0-2.085 1.749-3.777 3.898-3.777.208 0 .416.017.624.043 2.39.35 3.847 2.768 4.347 3.734-.508.974-1.974 3.384-4.355 3.734zm11.558.043c-.208 0-.416-.017-.624-.043-2.39-.35-3.856-2.768-4.347-3.734.491-.966 1.957-3.384 4.347-3.734.208-.026.416-.043.624-.043 2.149 0 3.89 1.7 3.89 3.777 0 2.085-1.75 3.777-3.89 3.777zm1.65-4.404v1.134h-1.205v1.182h-1.156v-1.182H16.17v-1.134h1.206V10.19h1.156v1.183h1.206zM4.246 12.498H7.82v-1.125H4.245v1.125z"/></g>
+</svg>
