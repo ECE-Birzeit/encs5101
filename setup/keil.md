@@ -2,6 +2,7 @@
 outline: deep
 title: Keil uVision5
 description: Install Keil uVision5, create a project for the generic ARM Cortex-M4 (ARMCM4), write an assembly program and step through it in the simulator. Used for experiments 1 and 2.
+order: 1
 ---
 
 # Keil uVision5

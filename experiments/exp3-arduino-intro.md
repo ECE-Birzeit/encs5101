@@ -1,6 +1,7 @@
 ---
 title: Introduction to Microcontrollers and Arduino
 description: Program the Arduino Mega 2560 in C. Blink LEDs, read push buttons with pull-up and pull-down resistors, and scan a keypad, with output on the Serial Monitor.
+short: "Arduino Basics"
 ---
 
 # Introduction to Microcontrollers and Arduino

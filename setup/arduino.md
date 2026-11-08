@@ -1,6 +1,7 @@
 ---
 title: Arduino IDE
 description: Install the Arduino IDE, select the Mega 2560, upload a sketch, use the Serial Monitor and install libraries.
+order: 2
 ---
 
 # Arduino IDE

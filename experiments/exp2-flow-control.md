@@ -1,6 +1,7 @@
 ---
 title: Flow Control Instructions
 description: Compare instructions, condition codes, branches and loops on the Cortex-M4, and walking byte strings and word arrays in memory.
+short: "Flow Control"
 ---
 
 # Flow Control Instructions
