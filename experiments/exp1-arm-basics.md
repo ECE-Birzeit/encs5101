@@ -2,6 +2,7 @@
 title: ARM Assembly and Keil uVision5
 description: The skeleton of an ARM assembly program, the Cortex-M4 registers and flags, and the core data-processing and load/store instructions, run in the Keil simulator.
 short: "ARM Assembly and Keil"
+manual: "/ENCS5101-Manual.pdf#page=1"
 ---
 
 # ARM Assembly and Keil uVision5
