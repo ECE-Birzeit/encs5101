@@ -7,7 +7,7 @@ Each guide replaces the matching chapter of the [department manual](/ENCS5101-Ma
 | 1 | [ARM Assembly and Keil uVision5](./exp1-arm-basics) | Program skeleton, core registers and flags, data-processing and load/store instructions, the Keil simulator |
 | 2 | [Flow Control Instructions](./exp2-flow-control) | `CMP` and condition codes, branches and loops, `IT` blocks, byte strings and arrays |
 | 3 | [Introduction to Microcontrollers and Arduino](./exp3-arduino-intro) | Arduino Mega 2560, sketches, LEDs, push buttons and pull resistors, edge detection, `millis()` timing, keypad and Serial Monitor |
-| 4 | DC Motor Control | Reading switches and sensors, software and hardware timing, PWM speed and direction control |
+| 4 | [DC Motor and Stepper Control](./exp4-motor-control) | Motor drivers, PWM speed, the L298N H-bridge for direction, Serial commands, a 28BYJ-48 stepper with the `Stepper` library |
 | 5 | Assembly Programming on Arduino | ATmega2560 architecture and addressing modes, port mapping, AVR assembly |
 | 6 | Registers, Timers, Interrupts and ADC | Port and timer registers, hardware and software interrupts, ADC with an LDR and a TMP36, 7-segment display |
 | 7 | Serial Communication | UART, SPI and I²C, two Arduinos talking, an I²C LCD |
