@@ -24,8 +24,8 @@ Arduino IDE 2 with the board/port drop-down open and "Arduino Mega or Mega 2560"
 
 | Action | Button | Shortcut |
 | --- | --- | --- |
-| Verify (compile only) | ✓ | <kbd>Ctrl</kbd>+<kbd>R</kbd> |
-| Upload to the board | → | <kbd>Ctrl</kbd>+<kbd>U</kbd> |
+| Verify (compile only) | check mark | <kbd>Ctrl</kbd>+<kbd>R</kbd> |
+| Upload to the board | right arrow | <kbd>Ctrl</kbd>+<kbd>U</kbd> |
 | Serial Monitor | magnifier, top right | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> |
 
 **File → New Sketch** opens an empty sketch with `setup()` and `loop()`. Paste your code over it, then **Upload**. The output pane ends with *Done uploading* and the board starts running the new sketch at once. It keeps running it, even after a power cycle, until you upload something else.

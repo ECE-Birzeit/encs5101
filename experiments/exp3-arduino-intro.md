@@ -78,10 +78,7 @@ void loop() {
 
 An LED conducts only one way: current flows from the **anode** (long leg, +) to the **cathode** (short leg, flat side of the rim, −). It also needs a **series resistor**, or it draws more current than the pin can supply. With about 2 V across a red LED, 220 Ω gives (5 − 2) / 220 ≈ 14 mA, which is bright and safe.
 
-```text
-pin ──[ 220 Ω ]──▶|── GND
-                anode  cathode
-```
+![Pin 13 through a 220 Ω resistor to the LED's anode, its cathode to GND](/images/exp3/led-circuit.svg)
 
 ### Push buttons and pull resistors
 
