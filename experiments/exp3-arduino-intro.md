@@ -179,37 +179,47 @@ Not every keypad puts its pins in the order R1–R4, C1–C3. If the keys print 
 
 ## Lab work
 
+Each lab work starts from a sketch that already works except for a few lines marked `TODO`. Copy it into the IDE, fill in the TODOs, and upload.
+
 ### Lab work 1: binary counter
 
-Wire three LEDs (pins 2, 3 and 4) and one button using `INPUT_PULLUP`. Each press adds 1 to a counter, shown in binary on the LEDs: 000, 001, … 111, then back to 000.
+Three LEDs show a number in binary: 000, 001, … 111, then back to 000. Each button press adds 1.
+
+Wire LEDs on pins 2, 3 and 4 (each through 220 Ω to GND), and a button between pin 5 and GND.
+
+<<< @/snippets/exp3/lab1-starter.ino{cpp}
 
 ::: tip Hints
-- Count on the **edge**, as in [Detecting one press](#detecting-one-press), not on the level.
-- `(count >> i) & 1` is bit *i* of `count`, which is exactly the `HIGH`/`LOW` for LED *i*.
+- **TODO 1:** `count = (count + 1) % 8;` adds 1 and wraps 7 back to 0.
+- **TODO 2:** `(count >> i) & 1` is bit `i` of `count`, 1 or 0, so it can go straight into `digitalWrite(LED_PINS[i], (count >> i) & 1);`
 :::
 
 ### Lab work 2: blink speed control
 
-One LED blinks. Button A makes it blink faster and button B slower, in steps, within limits you choose, for example 100–1000 ms. Use `INPUT_PULLUP` for both buttons.
+One LED blinks. Button A makes it blink faster, button B slower, in steps of 100 ms between 100 and 1000 ms.
+
+Use the on-board LED, and buttons between pin 6 and GND (faster) and pin 7 and GND (slower).
+
+<<< @/snippets/exp3/lab2-starter.ino{cpp}
 
 ::: tip Hints
-- With `delay()` in the blink, presses are missed while the LED is waiting. Use [`millis()` timing](#timing-without-delay).
-- Print the current interval with `Serial.println()` so you can see each press register.
+- **TODO 1:** `if (interval > 100) interval = interval - 100;`
+- **TODO 2:** the same idea, the other way: add 100 if it is below 1000.
+- The blinking already uses [`millis()` timing](#timing-without-delay), so presses are never missed.
 :::
 
 ### Lab work 3: keypad password
 
-Extend Example 3 into a password lock, with all messages on the Serial Monitor:
+The Serial Monitor asks for a 4-digit password. Type it on the keypad and press `#`: a match prints `Hello`, anything else prints `Wrong password`. The password is `1234`, fixed in the sketch.
 
-1. Pressing `*` starts **setting** a 4-digit password. Digits typed after it are collected, and `#` saves them.
-2. The sketch then asks for the password. The user types digits and confirms with `#`.
-3. If they match, print `Hello`; otherwise print `Wrong password` and ask again.
+Keep the Example 3 keypad wiring.
 
-Never accept more than 4 digits: ignore extra digit keys.
+<<< @/snippets/exp3/lab3-starter.ino{cpp}
 
 ::: tip Hints
-- Keep a `mode` variable (`SETTING`, `ENTERING`) and handle each key according to the current mode. This is a small **state machine**.
-- Store the digits in a `char` array plus a count, and compare them with a loop or `strncmp`.
+- **TODO 1:** `typed[n] = key;` then `n++;`
+- **TODO 2:** `strcmp(typed, PASSWORD) == 0` is true when the two strings are equal. Use it in an `if` / `else` with two `Serial.println()`.
+- **TODO 3:** `n = 0;`
 :::
 
 ## Common problems
@@ -230,3 +240,4 @@ Never accept more than 4 digits: ignore extra digit keys.
 - Wire four LEDs and make pairs alternate every second (the manual's TODO 1).
 - Fade an LED on a `~` pin by stepping `analogWrite()` from 0 to 255 and back.
 - Show the counter of Lab work 1 on the Serial Monitor as well, in binary: `Serial.println(count, BIN)`.
+- Let the user set the password: pressing `*` starts typing a new one, and `#` saves it (the manual's full version of Lab work 3).

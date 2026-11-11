@@ -155,35 +155,34 @@ The shaft makes exactly one turn, then turns back. The four LEDs on the board sh
 
 ## Lab work
 
-### Lab work 1: Serial motor console
+Each lab work starts from a sketch that already works except for a few lines marked `TODO`. Copy it into the IDE, fill in the TODOs, and upload.
 
-Control the DC motor from the Serial Monitor, using the Example 1 circuit. Each line typed is one command:
+### Lab work 1: Serial speed control
 
-| Command | Effect |
-| --- | --- |
-| A number from −255 to 255 | Run at that speed; negative is reverse, 0 stops |
-| `b` | Brake |
-| Anything else, or a number out of range | Print an error and keep the current speed |
+Type a speed from −255 to 255 in the Serial Monitor and the motor runs at it: negative is reverse, 0 stops. Anything out of range prints an error and leaves the motor alone.
 
-After every accepted command, print the speed and direction, for example `Forward at 180 (71 %)`.
+Keep the Example 1 circuit. Set the Serial Monitor's line ending to **Newline**.
+
+<<< @/snippets/exp4/lab1-starter.ino{cpp}
 
 ::: tip Hints
-- Start from [Reading a number](#reading-a-number-from-the-serial-monitor) and `setMotor()` from Example 1.
-- Brake is `IN1` = `IN2` with `ENA` high, which `setMotor()` cannot express. Write a small `brake()` for it.
-- Reversing at full speed makes a current spike. Stop for about 200 ms before changing direction.
+- **TODO 1 and 2** are one `if` / `else`. The condition is `speed >= -255 && speed <= 255`.
+- Print the speed with `Serial.print("Speed set to ");` then `Serial.println(speed);`
+- Start with values above your motor's starting duty from [Example 2](#example-2-find-the-starting-duty), or it only hums.
 :::
 
-### Lab work 2: stepper to an angle
+### Lab work 2: stepper by an angle
 
-Make the stepper point the shaft at an angle typed on the Serial Monitor, from 0 to 359. The angle is **absolute**: typing `90` twice moves the first time and not the second. Take 0 as wherever the shaft is at reset.
+Type an angle in the Serial Monitor and the stepper shaft turns by that many degrees: `90` is a quarter turn, `-90` turns back.
 
-1. Keep the current position, in steps, in a variable.
-2. For each angle typed, work out the target in steps and move by the difference.
-3. Print the new angle when the move is done.
+Keep the Example 3 circuit. Set the Serial Monitor's line ending to **Newline**.
+
+<<< @/snippets/exp4/lab2-starter.ino{cpp}
 
 ::: tip Hints
-- `target = angle * 2048L / 360`. The `L` keeps the product from overflowing an `int`, which holds at most 32767.
-- Going from 350° to 10° by the short way means 20° forward, not 340° back. Get the long way working first, then fix it.
+- **TODO 1:** one turn is 360° and 2048 steps, so `long steps = angle * 2048L / 360;`. The `L` stops the multiplication from overflowing an `int`.
+- **TODO 2:** `motor.step(steps);`
+- Put a bit of tape on the shaft as a pointer, so you can see the angle.
 :::
 
 ## Common problems
@@ -205,3 +204,5 @@ Make the stepper point the shaft at an angle typed on the Serial Monitor, from 0
 - Ramp speed changes smoothly with `millis()` instead of jumping, so the motor never jerks.
 - Run the stepper in the manual's sequence: 5 rpm for 2 s, reverse for 3 s, 3 rpm for 4 s, stop for 2 s. Work out each step count from the time.
 - Drive a DC motor with a single PN2222 transistor and a flyback diode (manual Part 1). It sets speed, but can it reverse?
+- Add a brake command `b` to Lab work 1: `IN1` and `IN2` both `HIGH` with `ENA` at 255.
+- Make Lab work 2 **absolute**: keep the shaft's position in a variable, so typing `90` twice turns only the first time.
