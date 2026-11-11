@@ -8,7 +8,7 @@ Each guide replaces the matching chapter of the [department manual](/ENCS5101-Ma
 | 2 | [Flow Control Instructions](./exp2-flow-control) | `CMP` and condition codes, branches and loops, `IT` blocks, byte strings and arrays |
 | 3 | [Introduction to Microcontrollers and Arduino](./exp3-arduino-intro) | Arduino Mega 2560, sketches, LEDs, push buttons and pull resistors, edge detection, `millis()` timing, keypad and Serial Monitor |
 | 4 | [DC Motor and Stepper Control](./exp4-motor-control) | Motor drivers, PWM speed, the L298N H-bridge for direction, Serial commands, a 28BYJ-48 stepper with the `Stepper` library |
-| 5 | Assembly Programming on Arduino | ATmega2560 architecture and addressing modes, port mapping, AVR assembly |
+| 5 | [Assembly Programming on Arduino](./exp5-avr-assembly) | Address spaces and addressing modes, port registers and pin mapping, AVR assembly functions called from a sketch |
 | 6 | [Registers, Timers, Interrupts and ADC](./exp6-timers-interrupts-adc) | Port registers and a 7-segment display, Timer1 overflow interrupts, external interrupts, the ADC with a TMP36 |
 | 7 | Serial Communication | UART, SPI and I²C, two Arduinos talking, an I²C LCD |
 | 8 | LabVIEW with Arduino | LabVIEW basics, the LINX toolkit, controlling an Arduino from a VI |

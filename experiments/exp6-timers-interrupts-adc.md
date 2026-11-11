@@ -17,31 +17,18 @@ manual: "/ENCS5101-Manual.pdf#page=110"
 - Read a temperature sensor with `analogRead()` and convert the result to volts and degrees.
 
 ::: tip Before the lab
-Finish [Experiment 3](./exp3-arduino-intro). You need binary and hex to follow the register examples: `0b00000111` is `0x07` is 7.
+Finish [Experiment 5](./exp5-avr-assembly). This experiment uses its port registers from C. You need binary and hex: `0b00000111` is `0x07` is 7.
 :::
 
 ## Background
 
-### Port registers
+### Port registers in C
 
-The ATmega2560's pins are grouped into **ports** of 8, named A to L. Each Arduino pin is one bit of one port; the [Mega pinout](./exp3-arduino-intro#the-arduino-mega-2560) shows the mapping, as labels such as `PA0`. Port A is convenient because its 8 bits are 8 neighbouring header pins:
-
-| Bit of port A | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Arduino pin | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 |
-
-Three registers control each port `x`, one bit per pin:
-
-| Register | Bit = 1 | Bit = 0 |
-| --- | --- | --- |
-| `DDRx` (data direction) | Output | Input |
-| `PORTx`, output pin | Drive `HIGH` | Drive `LOW` |
-| `PORTx`, input pin | Internal pull-up on | Pull-up off |
-| `PINx` (read only) | Pin reads `HIGH` | Pin reads `LOW` |
+[Experiment 5](./exp5-avr-assembly#port-registers) set port bits one at a time from assembly. In C the same registers are plain variables, so a whole port is one assignment. As a reminder: `DDRx` bit 1 makes the pin an output, `PORTx` drives it (or turns on the pull-up of an input), and `PINx` reads it. Port A bits 0–7 are pins 22–29.
 
 So `DDRA = 0xFF; PORTA = 0xF0;` makes all of port A outputs, pins 26–29 `HIGH` and 22–25 `LOW`, in two instructions instead of sixteen calls.
 
-To change one bit and leave the rest alone, use the bit operators:
+To change one bit and leave the rest alone, the way `sbi` and `cbi` do, use the bit operators:
 
 | Code | Effect on bit `n` |
 | --- | --- |
