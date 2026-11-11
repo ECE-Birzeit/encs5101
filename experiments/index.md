@@ -9,7 +9,7 @@ Each guide replaces the matching chapter of the [department manual](/ENCS5101-Ma
 | 3 | [Introduction to Microcontrollers and Arduino](./exp3-arduino-intro) | Arduino Mega 2560, sketches, LEDs, push buttons and pull resistors, edge detection, `millis()` timing, keypad and Serial Monitor |
 | 4 | [DC Motor and Stepper Control](./exp4-motor-control) | Motor drivers, PWM speed, the L298N H-bridge for direction, Serial commands, a 28BYJ-48 stepper with the `Stepper` library |
 | 5 | Assembly Programming on Arduino | ATmega2560 architecture and addressing modes, port mapping, AVR assembly |
-| 6 | Registers, Timers, Interrupts and ADC | Port and timer registers, hardware and software interrupts, ADC with an LDR and a TMP36, 7-segment display |
+| 6 | [Registers, Timers, Interrupts and ADC](./exp6-timers-interrupts-adc) | Port registers and a 7-segment display, Timer1 overflow interrupts, external interrupts, the ADC with a TMP36 |
 | 7 | Serial Communication | UART, SPI and I²C, two Arduinos talking, an I²C LCD |
 | 8 | LabVIEW with Arduino | LabVIEW basics, the LINX toolkit, controlling an Arduino from a VI |
 | 9 | Elevator Control System | The MDA-007 elevator kit: DC motor, photo-interrupter position sensing, limit switches |
