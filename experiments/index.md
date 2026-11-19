@@ -10,7 +10,7 @@ Each guide replaces the matching chapter of the [department manual](/ENCS5101-Ma
 | 4 | [DC Motor and Stepper Control](./exp4-motor-control) | Motor drivers, PWM speed, the L298N H-bridge for direction, Serial commands, a 28BYJ-48 stepper with the `Stepper` library |
 | 5 | [Assembly Programming on Arduino](./exp5-avr-assembly) | Address spaces and addressing modes, port registers and pin mapping, AVR assembly functions called from a sketch |
 | 6 | [Registers, Timers, Interrupts and ADC](./exp6-timers-interrupts-adc) | Port registers and a 7-segment display, Timer1 overflow interrupts, external interrupts, the ADC with a TMP36 |
-| 7 | Serial Communication | UART, SPI and I²C, two Arduinos talking, an I²C LCD |
+| 7 | [Serial Communication](./exp7-serial-communication) | UART frames and baud rate, two Megas linked with `Serial1`, the I²C bus and addresses, an I²C LCD, reading a second Arduino over I²C |
 | 8 | LabVIEW with Arduino | LabVIEW basics, the LINX toolkit, controlling an Arduino from a VI |
 | 9 | Elevator Control System | The MDA-007 elevator kit: DC motor, photo-interrupter position sensing, limit switches |
 | 10 | Introduction to Raspberry Pi | Linux on a single-board computer, GPIO from Python |
